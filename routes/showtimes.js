@@ -4,7 +4,7 @@ var router = express.Router();
 var showtimes = require('showtimes');
 
 /* GET home page. */
-router.get('/showtimes?zip=zipcode', function(req, res, next) {
+router.get('/showtimes?zip', function(req, res, next) {
 	var zipcode = req.query.zip;
 	var s = showtimes(zipcode, {});
 
