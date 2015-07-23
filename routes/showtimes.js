@@ -4,8 +4,8 @@ var router = express.Router();
 var showtimes = require('showtimes');
 
 /* GET home page. */
-router.get('/showtimes?zip', function(req, res, next) {
-	var zipcode = req.query.zip;
+router.get('/:zipcode', function(req, res, next) {
+	var zipcode = req.params.zipcode;
 	var s = showtimes(zipcode, {});
 
 	s.getTheaters( function(err, theaters) {
@@ -15,3 +15,4 @@ router.get('/showtimes?zip', function(req, res, next) {
 });
 
 module.exports = router;
+
