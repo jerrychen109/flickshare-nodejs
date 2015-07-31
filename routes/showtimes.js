@@ -6,7 +6,7 @@ var showtimes = require('showtimes');
 /* GET home page. */
 router.get('/:location', function(req, res, next) {
 	var location = req.params.location;
-	var s = showtimes(location, {"date": 6});
+	var s = showtimes(location, {"date": 7});
 
 	s.getTheaters( function(err, theaters) {
 		res.type('application/json');
