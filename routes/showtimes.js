@@ -4,8 +4,8 @@ var router = express.Router();
 var showtimes = require('showtimes');
 
 /* GET home page. */
-router.get('/:location', function(req, res, next) {
-	var location = req.params.location;
+router.get('', function(req, res, next) {
+	var location = req.query.location;
 	var date = req.query.date;
 
 	var s = showtimes(location, {});
