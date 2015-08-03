@@ -11,7 +11,7 @@ router.get('', function(req, res, next) {
 
 	var s = showtimes(location, {"date": date});
 
-	s.getShowtimes(function(err, data) {
+	s.getShowtimes(tid, function(err, data) {
 		res.type('application/json');
 		res.send(data);
 	});
